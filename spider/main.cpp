@@ -50,11 +50,6 @@ void parseLink(Link link, Client& client, int depth, int index, int count)
 
 		// TODO: Parse HTML code here on your own
 		std::vector<Link> links = getLinks(html, link.protocol, link.hostName);
-
-		for (auto a : links)
-		{
-			std::cout << a.query << std::endl;
-		}
 		std::string text = remover(html);
 		std::vector<std::string> words = indexer(text);
 		std::map<std::string, int> wordsTotal = counter(words);
