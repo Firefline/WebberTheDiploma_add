@@ -194,7 +194,7 @@ std::vector<Link> getLinks(const std::string& html, ProtocolType protocol, const
 	{
 		std::smatch match = *i;
 		std::string match_str = match.str();
-		links.push_back(match_str.substr(9, match_str.size() - 10));
+		links.push_back(match_str.substr(9, match_str.size() - 9));
 
 	}
 
